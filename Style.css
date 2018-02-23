@@ -1,62 +1,227 @@
-﻿body {
-    font-family: 'Roboto Condensed', sans-serif;
+body {
+     font-family: 'Roboto Condensed', sans-serif;
+     background: url(Pictures/numberbg.jpg);
+     background-size: cover;
+     padding: 10px;
 }
-.floating-box-title {
-    display: inline-block;
-    width: 30%;
-    height: 500%;
-    margin: 10px;
-    border: 1px solid #1684bb;
-    text-align: center
+/*The banner*/
+ .banner {
+     text-align: center;
 }
-
-.floating-box-content {
-    display: inline-block;
-    width: 30%;
-    height: 500%;
-    margin: 12px;
-    text-align: left;
-    vertical-align: text-top;
-    border: 1px solid white;
+ .banner img {
+     width: 100%;
 }
-
-*{
-   padding: 0px;
-   margin: 0px;
+/*ALL CONTENT MUST BE PUT IN THESE BOXES!*/
+ .floating-box3 {
+     display: inline-block;
+     width: 33%;
+     margin: 2px;
+     text-align: center;
+     vertical-align: top;
+     align-items:center;
+     float: left;
+    /*This is really important for the layout*/
+     background-color: #eae7e6e6;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
 }
-#navl {
-	width: 100%;
-	height: 70px;
-	line-height:70px;
-	background: #1684bb;
+/*Responsive content size adjusting*/
+ @media screen and (max-width: 1300px) {
+     .floating-box3 {
+         width: 100%;
+         float: auto;
+        /*This is really important for the layout*/
+    }
 }
-#navl h1{
-    float: left;
-	font-size: 2.5 em;
-	margin-left: 15px;
-    color:aliceblue;
+ .floating-box2 {
+     display: inline-block;
+     width: 48%;
+     margin: 2px;
+     text-align: center;
+     vertical-align: top;
+     align-items:center;
+     float: left;
+    /*This is really important for the layout*/
+     background-color: #eae7e6e6;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
 }
-
-#navl h1 a{
-    text-decoration: none;
-	color: white;
+/*Responsive content size adjusting*/
+ @media screen and (max-width: 1300px) {
+     .floating-box2 {
+         width: 100%;
+         float: auto;
+        /*This is really important for the layout*/
+    }
 }
-#navl ul {
-	float: right;
-	margin.right: 15px;
+ .floating-box1 {
+     display: inline-block;
+     width: 100%;
+     margin: 2px;
+     text-align: center;
+     vertical-align: top;
+     align-items:center;
+     float: left;
+    /*This is really important for the layout*/
+     background-color: #eae7e6e6;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
 }
-#navl ul li{
-    display: inline-block;
-	list-style-type: none;
+ .title {
+     border: 3px solid #1684bb;
+     background-color: #1684bb;
+     color: white;
+     font-size: 25px;
 }
-#navl ul li a{
-	text-decoration: none;
-	color: white;
-	padding: 25px;
+ *{
+     padding: 0px;
+     margin: 0px;
 }
-#navl ul li:hover{
-	background: #1684bb;
+/*Navigation business*/
+ #navl {
+     text-align: center;
+     line-height: 50px;
+     margin-bottom: 5px;
 }
-#active{
-   background: #1684bb;
+ #navl ul li {
+     display: inline-block;
+     width: 90px;
+     list-style-type: none;
 }
+ #navl ul li a {
+     text-decoration: none;
+     color: white;
+}
+ #navl ul li:hover {
+     background: #1684bb;
+     transition: all ease-in-out 0.45s;
+}
+ li.active {
+     background: #1684bb;
+}
+ li.passive {
+     background-color: #0009 
+}
+/*Disappear when zoomed in too hard*/
+ @media screen and (max-width: 400px) {
+     #navl {
+         display: none;
+    }
+}
+/*Just the service button*/
+ #service{
+     background: white;
+     width:300px;
+     height:60px;
+     line-height:60px;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 10px;
+     color:white;
+     font-weight: 200px;
+     box-shadow:1px 5px 2px 2px #6e6651e6;
+     position:center;
+     text-align:center 
+}
+ #service:hover{
+     box-shadow: 1px 5px 2px 2px rgba(84, 69, 69, 0.53);
+     transition: all ease-in-out 0.45s;
+}
+ #service a{
+     color: #1684bb;
+     text-decoration: none;
+     padding: 10px;
+}
+/*Footer*/
+footer {
+    margin-top: 30%;
+    clear: left;
+    width: 100%;
+    color: #eef1ff;
+    background-color: black;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding-left: 5px;
+}
+/*Form section*/
+ #form {
+     height: 100%;
+     background: #1684bba8;
+     color: white;
+     padding-left: 30%;
+     padding-bottom: 10px;
+     resize:none 
+}
+ #name{
+     width: 300px;
+     height: 30px;
+     padding: 3px;
+     border-radius: 5px;
+     border:1px solid #CCC;
+}
+ #email {
+     width: 300px;
+     height: 30px;
+     padding: 3px;
+     border-radius: 5px;
+     border: 1px solid #CCC;
+}
+ #com {
+     width: 600px;
+     height: 200px;
+     padding: 3px;
+     border-radius: 5px;
+     border: 1px solid #CCC;
+     resize:none;
+}
+/*Responsive resize for the form*/
+ @media screen and (max-width: 1000px) {
+     #form {
+         padding-left: 5%;
+    }
+     #name {
+         width: 90%;
+    }
+     #email {
+         width: 90%;
+    }
+     #com {
+         width: 90%;
+         height: 100px;
+    }
+}
+/*This much is the button (Put the content in <span> to get effect*/
+ button {
+     width: 100px;
+     background: #0168c3;
+     cursor: pointer;
+     height: 50px;
+     color: #b2c9de;
+     font-size: 18px;
+     vertical-align: text-bottom;
+     left:auto;
+}
+/*Let's make the button awesome!*/
+ button span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.5s;
+}
+ button span:after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.5s;
+}
+ button:hover span {
+     padding-right: 25px;
+}
+ button:hover span:after {
+     opacity: 1;
+     right: 0;
+}
+ 
